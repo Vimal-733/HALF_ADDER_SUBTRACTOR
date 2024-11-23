@@ -1,4 +1,4 @@
-# HALF_ADDER_SUBTRACTOR
+![WhatsApp Image 2024-11-23 at 18 28 18_eb47b1e0](https://github.com/user-attachments/assets/4ef4b909-85bc-4837-9191-78493584e0a3)![WhatsApp Image 2024-11-23 at 18 28 18_672aa4ba](https://github.com/user-attachments/assets/3e9240e1-1286-4b1a-af1a-3cd9810259b2)# HALF_ADDER_SUBTRACTOR
 
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
@@ -49,13 +49,33 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
+i)HALF ADDER
 
+module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum= (a ^ b);
+assign carry= ( a & b);
+endmodule
+
+ii)HALF SUBTRACTOR
+
+module hs(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference= (a ^ b);
+assign borrow= ( ~a & b);
+endmodule
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
 Developed by: RegisterNumber:*/
 
 **RTL Schematic**
+![WhatsApp Image 2024-11-23 at 18 28 18_900d5d5b](https://github.com/user-attachments/assets/44c8bbd5-1d93-4e8e-952e-783d91cf188e)
 
 **Output/TIMING Waveform**
+![WhatsApp Image 2024-11-23 at 18 28 18_ae4a0644](https://github.com/user-attachments/assets/ca46f6fd-4f6d-4246-8643-cbf483661e2b)
+![WhatsApp Image 2024-11-23 at 18 28 19_7116d85c](https://github.com/user-attachments/assets/26cdbd4d-d55b-4b9d-ac05-2e6927c93415)
 
 **Result:**
+This configuration demonstrates how the same circuit can perform two different operations (addition and subtraction) using a control signal.
